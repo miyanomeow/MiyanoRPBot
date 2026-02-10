@@ -1,0 +1,14 @@
+services:
+  rp-bot:
+    build: utils
+    container_name: miyanorpbot
+    restart: always
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10mb"
+        max-file: "3"
