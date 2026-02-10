@@ -11,7 +11,7 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Копируем все файлы проекта в контейнер
-COPY utils .
+COPY . .
 
 # Команда для запуска бота
 CMD ["python", "bot.py"]
